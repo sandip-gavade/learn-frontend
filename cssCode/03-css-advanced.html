@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Advanced CSS</title>
+
+    <style>
+
+        /* ====================================== */
+        /* FONT STYLING */
+        /* ====================================== */
+
+        body {
+
+            font-family: Arial;
+
+            font-size: 16px;
+        }
+
+        /*
+        Default font-size:
+        16px
+        */
+
+
+        .heading {
+
+            font-size: 40px;
+
+            font-weight: bold;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            text-decoration: underline;
+        }
+
+
+        .italicText {
+
+            font-style: italic;
+        }
+
+
+        /* ====================================== */
+        /* UNITS */
+        /* ====================================== */
+
+        .parent {
+
+            font-size: 20px;
+        }
+
+        .emExample {
+
+            font-size: 1.5em;
+        }
+
+        /*
+        em
+        ---
+        Relative to parent
+        */
+
+
+        .remExample {
+
+            font-size: 2rem;
+        }
+
+        /*
+        rem
+        ----
+        Relative to root(html)
+        */
+
+
+        /* ====================================== */
+        /* CHILD SELECTOR */
+        /* ====================================== */
+
+        .container > p {
+
+            color: red;
+        }
+
+        /*
+        > selects direct child
+        */
+
+
+        /* ====================================== */
+        /* DESCENDANT SELECTOR */
+        /* ====================================== */
+
+        .wrapper span {
+
+            background-color: yellow;
+        }
+
+        /*
+        space selects all descendants
+        */
+
+
+        /* ====================================== */
+        /* ADJACENT SIBLING */
+        /* ====================================== */
+
+        h3 + p {
+
+            color: blue;
+        }
+
+        /*
+        + selects immediate next sibling
+        */
+
+
+        /* ====================================== */
+        /* GENERAL SIBLING */
+        /* ====================================== */
+
+        h4 ~ p {
+
+            color: green;
+        }
+
+        /*
+        ~ selects all siblings after element
+        */
+
+
+        /* ====================================== */
+        /* POSITION */
+        /* ====================================== */
+
+        .relativeBox {
+
+            position: relative;
+
+            left: 30px;
+
+            background-color: pink;
+
+            width: 200px;
+
+            padding: 20px;
+        }
+
+        /*
+        relative
+        moves from original position
+        */
+
+
+        .absoluteParent {
+
+            position: relative;
+
+            width: 300px;
+
+            height: 200px;
+
+            background-color: lightgray;
+        }
+
+
+        .absoluteBox {
+
+            position: absolute;
+
+            top: 20px;
+
+            right: 20px;
+
+            background-color: orange;
+
+            padding: 10px;
+        }
+
+        /*
+        absolute positions relative
+        to nearest positioned parent
+        */
+
+
+        .fixedBox {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            background-color: black;
+
+            color: white;
+
+            padding: 10px;
+        }
+
+        /*
+        fixed stays fixed on screen
+        */
+
+
+        .stickyBox {
+
+            position: sticky;
+
+            top: 0;
+
+            background-color: yellow;
+
+            padding: 10px;
+        }
+
+        /*
+        sticky sticks while scrolling
+        */
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ====================================== -->
+    <!-- FONT STYLING -->
+    <!-- ====================================== -->
+
+    <h1 class="heading">
+        CSS Fonts
+    </h1>
+
+    <p class="italicText">
+        Italic Text Example
+    </p>
+
+
+    <!-- ====================================== -->
+    <!-- UNITS -->
+    <!-- ====================================== -->
+
+    <div class="parent">
+
+        Parent Font Size 20px
+
+        <p class="emExample">
+            1.5em Example
+        </p>
+
+    </div>
+
+    <p class="remExample">
+        2rem Example
+    </p>
+
+
+    <!-- ====================================== -->
+    <!-- CHILD SELECTOR -->
+    <!-- ====================================== -->
+
+    <div class="container">
+
+        <p>Direct Child</p>
+
+        <div>
+            <p>Nested Child</p>
+        </div>
+
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- DESCENDANT SELECTOR -->
+    <!-- ====================================== -->
+
+    <div class="wrapper">
+
+        <div>
+            <span>Descendant Selector</span>
+        </div>
+
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- ADJACENT SIBLING -->
+    <!-- ====================================== -->
+
+    <h3>Heading</h3>
+
+    <p>
+        Adjacent sibling paragraph
+    </p>
+
+
+    <!-- ====================================== -->
+    <!-- GENERAL SIBLING -->
+    <!-- ====================================== -->
+
+    <h4>General Sibling Example</h4>
+
+    <p>Paragraph 1</p>
+
+    <p>Paragraph 2</p>
+
+
+    <!-- ====================================== -->
+    <!-- POSITION RELATIVE -->
+    <!-- ====================================== -->
+
+    <div class="relativeBox">
+        Relative Position
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- POSITION ABSOLUTE -->
+    <!-- ====================================== -->
+
+    <div class="absoluteParent">
+
+        Parent Container
+
+        <div class="absoluteBox">
+            Absolute Box
+        </div>
+
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- POSITION STICKY -->
+    <!-- ====================================== -->
+
+    <div class="stickyBox">
+        Sticky Navbar
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- POSITION FIXED -->
+    <!-- ====================================== -->
+
+    <div class="fixedBox">
+        Fixed Chat Button
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- EMMET -->
+    <!-- ====================================== -->
+
+    <!--
+
+    Emmet Shortcut Examples
+
+    div.container
+    ul>li*5
+    nav>ul>li*3
+
+    Useful Links
+
+    https://devhints.io/emmet
+
+    https://www.freecodecamp.org/news/write-html-css-faster-with-emmet-cheat-codes/
+
+    VS Code Shortcut
+    ----------------
+    Ctrl + D -> Multi Select
+
+    -->
+
+
+</body>
+
+</html>

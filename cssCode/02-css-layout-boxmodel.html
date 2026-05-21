@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSS Layout and Box Model</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*
+        box-sizing:border-box
+
+        Width includes:
+        1. Content
+        2. Padding
+        3. Border
+
+        Margin is NOT included
+        */
+
+
+        /* ====================================== */
+        /* BLOCK ELEMENT */
+        /* ====================================== */
+
+        .blockElement {
+
+            background-color: lightblue;
+
+            width: 300px;
+
+            margin-bottom: 20px;
+        }
+
+        /*
+        div is block element
+
+        Takes full width
+        Starts from new line
+        */
+
+
+        /* ====================================== */
+        /* INLINE ELEMENT */
+        /* ====================================== */
+
+        .inlineElement {
+
+            background-color: yellow;
+        }
+
+        /*
+        span is inline element
+
+        Takes only required width
+        */
+
+
+        /* ====================================== */
+        /* DISPLAY PROPERTY */
+        /* ====================================== */
+
+        .card {
+
+            display: inline-block;
+
+            width: 200px;
+
+            height: 150px;
+
+            background-color: pink;
+
+            margin: 10px;
+
+            text-align: center;
+        }
+
+        /*
+        inline-block allows divs
+        to stay side by side
+        */
+
+
+        /* ====================================== */
+        /* BOX MODEL */
+        /* ====================================== */
+
+        .box {
+
+            width: 300px;
+
+            height: 150px;
+
+            background-color: lightgreen;
+
+            padding: 20px;
+
+            margin: 30px;
+
+            border: 5px solid black;
+        }
+
+        /*
+        Box Model
+
+        Content
+        Padding
+        Border
+        Margin
+        */
+
+
+        /* ====================================== */
+        /* BORDER */
+        /* ====================================== */
+
+        .borderExample {
+
+            border-width: 10px 5px 15px 8px;
+
+            border-style: solid;
+
+            border-color: red blue green yellow;
+
+            padding: 20px;
+
+            margin-top: 20px;
+        }
+
+        /*
+        TRBL
+        ----
+
+        Top Right Bottom Left
+        */
+
+
+        /* ====================================== */
+        /* BORDER RADIUS */
+        /* ====================================== */
+
+        .circle {
+
+            width: 150px;
+
+            height: 150px;
+
+            background-color: orange;
+
+            border-radius: 50%;
+        }
+
+        /*
+        border-radius:50%
+        creates circle
+        */
+
+
+        /* ====================================== */
+        /* BOX SHADOW */
+        /* ====================================== */
+
+        .shadowBox {
+
+            width: 250px;
+
+            height: 100px;
+
+            background-color: white;
+
+            margin-top: 30px;
+
+            box-shadow: 5px 5px gray;
+        }
+
+        /*
+        box-shadow:
+        x-axis y-axis color
+        */
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ====================================== -->
+    <!-- BLOCK ELEMENT -->
+    <!-- ====================================== -->
+
+    <div class="blockElement">
+        I am block element
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- INLINE ELEMENT -->
+    <!-- ====================================== -->
+
+    <span class="inlineElement">
+        Inline Element 1
+    </span>
+
+    <span class="inlineElement">
+        Inline Element 2
+    </span>
+
+
+    <!-- ====================================== -->
+    <!-- DISPLAY INLINE BLOCK -->
+    <!-- ====================================== -->
+
+    <h2>Display Inline Block</h2>
+
+    <div class="card">
+        Card 1
+    </div>
+
+    <div class="card">
+        Card 2
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- BOX MODEL -->
+    <!-- ====================================== -->
+
+    <div class="box">
+        CSS Box Model Example
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- BORDER -->
+    <!-- ====================================== -->
+
+    <div class="borderExample">
+        Border Example
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- BORDER RADIUS -->
+    <!-- ====================================== -->
+
+    <h2>Circle Shape</h2>
+
+    <div class="circle"></div>
+
+
+    <!-- ====================================== -->
+    <!-- BOX SHADOW -->
+    <!-- ====================================== -->
+
+    <div class="shadowBox">
+        Box Shadow Example
+    </div>
+
+</body>
+
+</html>

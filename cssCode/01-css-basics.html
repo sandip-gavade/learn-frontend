@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>CSS Basics</title>
+
+    <!-- ====================================== -->
+    <!-- INTERNAL CSS -->
+    <!-- ====================================== -->
+
+    <style>
+
+        /*
+        CSS
+        ---
+        Cascading Style Sheet
+
+        CSS flows from parent to child
+        */
+
+        /* ====================================== */
+        /* GLOBAL SELECTOR */
+        /* ====================================== */
+
+        * {
+            font-family: Arial;
+        }
+
+        /*
+        * -> Applies style to all elements
+        */
+
+
+        /* ====================================== */
+        /* ELEMENT SELECTOR */
+        /* ====================================== */
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            color: green;
+        }
+
+
+        /* ====================================== */
+        /* ID SELECTOR */
+        /* ====================================== */
+
+        #mainHeading {
+            background-color: yellow;
+        }
+
+        /*
+        # -> ID selector
+
+        ID should be unique
+        */
+
+
+        /* ====================================== */
+        /* CLASS SELECTOR */
+        /* ====================================== */
+
+        .box {
+            background-color: lightblue;
+            width: 300px;
+            height: 100px;
+        }
+
+        /*
+        . -> Class selector
+
+        Can be used for multiple elements
+        */
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- ====================================== -->
+    <!-- INLINE CSS -->
+    <!-- ====================================== -->
+
+    <h1
+        style="color:red;"
+    >
+        Inline CSS Example
+    </h1>
+
+    <!--
+    Inline CSS has highest priority
+    -->
+
+
+    <!-- ====================================== -->
+    <!-- ELEMENT SELECTOR -->
+    <!-- ====================================== -->
+
+    <h1>CSS Introduction</h1>
+
+    <p>
+        This paragraph uses element selector.
+    </p>
+
+
+    <!-- ====================================== -->
+    <!-- ID SELECTOR -->
+    <!-- ====================================== -->
+
+    <h2 id="mainHeading">
+        ID Selector Example
+    </h2>
+
+
+    <!-- ====================================== -->
+    <!-- CLASS SELECTOR -->
+    <!-- ====================================== -->
+
+    <div class="box">
+        First Box
+    </div>
+
+    <br>
+
+    <div class="box">
+        Second Box
+    </div>
+
+
+    <!-- ====================================== -->
+    <!-- EXTERNAL CSS -->
+    <!-- ====================================== -->
+
+    <!--
+
+    External CSS Example
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    -->
+
+
+
+    <!-- ====================================== -->
+    <!-- SPECIFICITY -->
+    <!-- ====================================== -->
+
+    <!--
+
+    Specificity Order
+
+    * < element < class < id < inline
+
+    Specificity Value
+
+    Global   -> (0,0,0)
+    Element  -> (0,0,1)
+    Class    -> (0,1,0)
+    ID       -> (1,0,0)
+
+    -->
+
+
+</body>
+
+</html>
